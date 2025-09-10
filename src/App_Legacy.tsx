@@ -4,20 +4,16 @@ import "./App.css";
 import Home from "./components/home";
 import Settings from "./components/settings";
 import { BrowserRouter, Routes, Route, RouterProvider } from "react-router-dom";
-import { router } from "./routes/MainRoute";
-import styled from "styled-components";
-
-const Container = styled.div`
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-`;
 
 function App() {
   return (
-    <Container>
-      <RouterProvider router={router} />
-    </Container>
+    <BrowserRouter>
+      {/*페이지 그룹*/}
+      <Routes>
+        <Route path={"/"} element={<Home />} />
+        <Route path={"/settings"} element={<Settings />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

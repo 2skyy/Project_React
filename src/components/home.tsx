@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const Container = styled.div``;
-
 const Title = styled.h1`
   color: blue;
   font-size: 120px;
